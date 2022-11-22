@@ -1,6 +1,7 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer')
 const fs = require('fs')
+const generateMarkdown = require('./utils/generateMarkdown.js')
 
 
 // TODO: Create an array of questions for user input
@@ -68,7 +69,9 @@ const questions = [
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+    fs.writeFileSync(`${fileName}.md`, data)
+}
 
 // TODO: Create a function to initialize app
 function init() {
@@ -77,6 +80,9 @@ function init() {
     prompt(questions)
     .then((response) => {
         console.log(response)
+        const fileContent = generateMarkdown(response)
+        console.log(fileContent)
+        writeToFile(response.fileName, fileContent)
     })
     // not sure which way is "better"
     // inquirer
