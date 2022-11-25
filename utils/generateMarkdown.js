@@ -12,17 +12,33 @@ function renderLicenseSection(license) {}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  return `# ${data.projectTitle}
-  ## Content of the File
-    * Description
-    * Installation Instructions
-    * Usage Information
-    * Contribution Guidelines
-    * Test Instructions
-    * License
-    * Questions
+  const licenseData = JSON.stringify(data.license);
+  console.log(licenseData)
+  // licenseData.replace(/\//g, 'ForwardSlash');
+  // console.log(licenseData)
+  var newLicenseData = JSON.parse(licenseData)
+  newLicenseData = JSON.parse(newLicenseData);
+  console.log('new license', newLicenseData);
+  console.log(typeof newLicenseData)
+  console.log('description', newLicenseData.desc)
+
+  return `# ${data.projectTitle} 
+${newLicenseData.license}
 ## Description
 ${data.description}
+
+## Content of the File
+[Installation Instructions](#installation-instructions)
+
+[Usage Information](#usage-information)
+
+[Contribution Guidelines](#contribution-guidelines)
+
+[Test Instructions](#test-instructions)
+
+[License](#license)
+
+[Questions](#questions)
 
 ## Installation Instructions
 ${data.installInstruct}
@@ -37,10 +53,14 @@ ${data.contributionGuidelines}
 ${data.testInstruct}
 
 ## License
-${data.license}
+${newLicenseData.desc}
 
 ## Questions
-github.com/${data.username}
+If you have any questions or concerns, please contact me through my email below: 
+
+${data.email}
+
+[github.com/${data.github}](https://www.github.com/${data.github})
 
   `;
 }
