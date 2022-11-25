@@ -1,3 +1,5 @@
+
+
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {}
@@ -13,14 +15,15 @@ function renderLicenseSection(license) {}
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   const licenseData = JSON.stringify(data.license);
-  console.log(licenseData)
+  // console.log(licenseData)
   // licenseData.replace(/\//g, 'ForwardSlash');
   // console.log(licenseData)
   var newLicenseData = JSON.parse(licenseData)
   newLicenseData = JSON.parse(newLicenseData);
-  console.log('new license', newLicenseData);
-  console.log(typeof newLicenseData)
-  console.log('description', newLicenseData.desc)
+  // console.log('new license', newLicenseData);
+  // console.log(typeof newLicenseData)
+  // console.log('description', newLicenseData.desc)
+
 
   return `# ${data.projectTitle} 
 ${newLicenseData.license}

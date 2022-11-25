@@ -1,4 +1,4 @@
-#  
+# l 
 Input your own License here.
 ## Description
 l
@@ -29,7 +29,7 @@ l
 l
 
 ## License
-input your license description here
+input your license badge here.
 
 ## Questions
 If you have any questions or concerns, please contact me through my email below: 
