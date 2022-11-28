@@ -78,9 +78,8 @@ function init() {
     const prompt = inquirer.createPromptModule();
     prompt(questions)
     .then((response) => {
-        console.log(response)
+        // console.log(response)
         const fileContent = generateMarkdown(response)
-        console.log(fileContent)
         writeToFile(response.fileName, fileContent)
     })
     // not sure which way is "better"
