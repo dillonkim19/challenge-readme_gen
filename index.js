@@ -49,10 +49,35 @@ const questions = [
         message: 'Choose a license: ',
         name: 'license',
         choices: [
-            {name: 'MIT', value: '{"desc":"[https://opensource.org/licenses/MIT](https://opensource.org/licenses/MIT)", "license":"[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)"}'},
-            {name: 'Apache 2.0', value: '{"desc":"[https://www.apache.org/licenses/LICENSE-2.0](https://www.apache.org/licenses/LICENSE-2.0)", "license":"[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)"}'},
-            {name: 'GNU GPL v3', value: '{"desc":"[https://www.gnu.org/licenses/gpl-3.0.en.html](https://www.gnu.org/licenses/gpl-3.0.en.html)", "license":"[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)"}'},
-            {name: 'Other', value: '{"desc":"input your license badge here.", "license":"Input your own License here."}'}, 
+            //{name: 'MIT', value: '{"desc":"[https://opensource.org/licenses/MIT](https://opensource.org/licenses/MIT)", "license":"[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)"}'},
+            {
+                name: 'MIT', 
+                value: {
+                    "desc":"[https://opensource.org/licenses/MIT](https://opensource.org/licenses/MIT)", 
+                    "license":"[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)"
+                }
+            },
+            {
+                name: 'Apache 2.0', 
+                value: {
+                    "desc":"[https://www.apache.org/licenses/LICENSE-2.0](https://www.apache.org/licenses/LICENSE-2.0)", 
+                    "license":"[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)"
+                }
+            },
+            {
+                name: 'GNU GPL v3', 
+                value: {
+                    "desc":"[https://www.gnu.org/licenses/gpl-3.0.en.html](https://www.gnu.org/licenses/gpl-3.0.en.html)", 
+                    "license":"[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)"
+                }
+            },
+            {
+                name: 'Other', 
+                value: {
+                    "desc":"input your license badge here.", 
+                    "license":"Input your own License here."
+                }
+            }, 
         ]
     }, //[github.com/${data.github}](https://www.github.com/${data.github})
     {
